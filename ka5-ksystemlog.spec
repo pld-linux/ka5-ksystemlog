@@ -1,15 +1,15 @@
-%define		kdeappsver	19.04.1
+%define		kdeappsver	20.12.3
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		ksystemlog
 Summary:	ksystemlog
 Name:		ka5-%{kaname}
-Version:	19.04.1
+Version:	20.12.3
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
-Source0:	http://download.kde.org/stable/applications/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	bc34116d4a1ec61dd2113c38ea42562a
+Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
+# Source0-md5:	87ab9fee402b6b6f6a48ff1eb4fc86dd
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
@@ -62,6 +62,7 @@ cd build
 %install
 rm -rf $RPM_BUILD_ROOT
 %ninja_install -C build
+rm -rf $RPM_BUILD_ROOT%{_kdedocdir}/{ko,zh_CN}
 
 %find_lang %{kaname} --all-name --with-kde --with-qm
 
@@ -74,3 +75,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_desktopdir}/org.kde.ksystemlog.desktop
 %dir %{_datadir}/kxmlgui5/ksystemlog
 %{_datadir}/kxmlgui5/ksystemlog/ksystemlogui.rc
+%{_datadir}/metainfo/org.kde.ksystemlog.appdata.xml
