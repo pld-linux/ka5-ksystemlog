@@ -46,6 +46,12 @@ KSystemLog is a system log viewer tool. This program is developed for
 beginner users, who don't know how to find information about their
 Linux system, and don't know where log files are.
 
+%description -l pl.UTF-8
+KSystemLog jest przeglądarką logów systemowych. Program jest
+przeznaczony głównie dla początkujących użytkowników, którzy nie
+wiedzą jak znaleźć informacje o ich Linuksie, ani nie wiedzą, gdzie
+są logi.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
