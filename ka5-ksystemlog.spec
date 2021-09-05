@@ -1,15 +1,15 @@
-%define		kdeappsver	21.08.0
+%define		kdeappsver	21.08.1
 %define		kframever	5.56.0
 %define		qtver		5.9.0
 %define		kaname		ksystemlog
 Summary:	ksystemlog
 Name:		ka5-%{kaname}
-Version:	21.08.0
+Version:	21.08.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications/Games
 Source0:	http://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	706de208f85c4f5609bd3f7500fee79e
+# Source0-md5:	c90cac2a2a8639da6916b57e73ca2013
 URL:		http://www.kde.org/
 BuildRequires:	Qt5Concurrent-devel
 BuildRequires:	Qt5Core-devel >= %{qtver}
